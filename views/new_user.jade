@@ -1,0 +1,64 @@
+doctype html
+html(lang='en')
+  head
+    title New User Form
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .jumbotron.container
+      h1(style='text-align:center')
+        strong      NEW USER REGISTRATION
+    .container
+      form.form-horizontal(method='post', action='/myaction-1')
+        legend Person
+        .form-group
+          label.col-sm-2(for='firstname') First Name
+          .col-sm-4
+            input#firstname.form-control(type='text', name='firstname', placeholder='First Name')
+          label.col-sm-2(for='lastname') Last Name
+          .col-sm-4
+            input#lastname.form-control(type='text', name='lastname', placeholder='Last Name')
+        .form-group
+          label.col-sm-2(for='gender') Gender
+          .col-sm-4
+            label.radio-inline
+              input#male(type='radio', name='gender', value='male')
+              |  Male
+            label.radio-inline
+              input#female(type='radio', name='gender', value='female')
+              |  Female
+          label.col-sm-2(for='dob') Date of Birth
+          .col-sm-4
+            input#dob.form-control(type='date', name='dob', placeholder='mm/dd/yyyy')
+        legend Address
+        .form-group
+          label.col-sm-2(for='address') Address
+          .col-sm-4
+            input#address.form-control(type='text', name='address', placeholder='Street + No')
+          label.col-sm-2(for='city') City
+          .col-sm-4
+            input#city.form-control(type='text', name='city', placeholder='City')
+        .form-group
+          label.col-sm-2(for='zipcode') ZIP Code
+          .col-sm-4
+            input#zipcode.form-control(type='text', name='zipcode', placeholder='ZIP Code')
+          label.col-sm-2(for='region') Region
+          .col-sm-4
+            input.form-control(type='text', name='Region', placeholder='Region')
+        legend Contact Info
+        .form-group
+          label.col-sm-2(for='phone') Phone
+          .col-sm-4
+            input#phone.form-control(type='tel', name='phone', placeholder='Phone Number')
+          label.col-sm-2(for='email') Email
+          .col-sm-4
+            input#email.form-control(type='email', name='email', placeholder='Email')
+        .form-group
+          label.col-sm-2(for='password') password
+          .col-sm-4
+            input#password.form-control(type='password', name='password')
+        br
+        br
+        button.btn.btn-info.btn-lg.center-block Submit

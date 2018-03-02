@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    title  Login Form
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    .container
+      .jumbotron
+        h1(style='text-align:center')  Login Form
+    br
+    br
+    div(style='width:500px; margin:0 auto;')
+      form.form-horizontal(method='post', action='/myaction-2')
+        .form-group
+          label.col-sm-3(for='username')  Username :
+          .col-sm-6
+            input.form-control(type='text', name='username')
+        .form-group
+          label.col-sm-3(for='password')  password :
+          .col-sm-6
+            input.form-control(type='password', name='password')
+        .checkbox
+          label
+            input(type='checkbox')
+            |  Remember me
+        br
+        br
+        button.btn.btn-info.center-block Submit
