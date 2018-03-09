@@ -5,4 +5,5 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('new_user');
 });
+
 module.exports = router;

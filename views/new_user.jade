@@ -16,10 +16,10 @@ html(lang='en')
         .form-group
           label.col-sm-2(for='firstname') First Name
           .col-sm-4
-            input#firstname.form-control(type='text', name='firstname', placeholder='First Name')
+            input#firstname.form-control(type='text', name='firstname', placeholder='First Name', required='')
           label.col-sm-2(for='lastname') Last Name
           .col-sm-4
-            input#lastname.form-control(type='text', name='lastname', placeholder='Last Name')
+            input#lastname.form-control(type='text', name='lastname', placeholder='Last Name', required='')
         .form-group
           label.col-sm-2(for='gender') Gender
           .col-sm-4
@@ -31,34 +31,37 @@ html(lang='en')
               |  Female
           label.col-sm-2(for='dob') Date of Birth
           .col-sm-4
-            input#dob.form-control(type='date', name='dob', placeholder='mm/dd/yyyy')
+            input#dob.form-control(type='date', name='dob', placeholder='mm/dd/yyyy', required='')
         legend Address
         .form-group
-          label.col-sm-2(for='address') Address
+          label.col-sm-2(for='address') Street
           .col-sm-4
-            input#address.form-control(type='text', name='address', placeholder='Street + No')
+            input#address.form-control(type='text', name='street', placeholder='Street + No')
           label.col-sm-2(for='city') City
           .col-sm-4
-            input#city.form-control(type='text', name='city', placeholder='City')
+            input#city.form-control(type='text', name='city', placeholder='City', required='')
         .form-group
           label.col-sm-2(for='zipcode') ZIP Code
           .col-sm-4
-            input#zipcode.form-control(type='text', name='zipcode', placeholder='ZIP Code')
-          label.col-sm-2(for='region') Region
+            input#zipcode.form-control(type='text', name='zipcode', placeholder='ZIP Code', required='')
+          label.col-sm-2(for='region') Country
           .col-sm-4
-            input.form-control(type='text', name='Region', placeholder='Region')
+            input.form-control(type='text', name='country', placeholder='Country')
         legend Contact Info
         .form-group
-          label.col-sm-2(for='phone') Phone
+          label.col-sm-2(for='username') Username
           .col-sm-4
-            input#phone.form-control(type='tel', name='phone', placeholder='Phone Number')
+            input#username.form-control(type='text', name='username', placeholder='username', required='')
           label.col-sm-2(for='email') Email
           .col-sm-4
-            input#email.form-control(type='email', name='email', placeholder='Email')
+            input#email.form-control(type='email', name='email', placeholder='Email', required='')
         .form-group
           label.col-sm-2(for='password') password
           .col-sm-4
-            input#password.form-control(type='password', name='password')
+            input#password.form-control(type='password', name='password', required='')
+          label.col-sm-2(for='phone') Phone
+          .col-sm-4
+            input#phone.form-control(type='tel', name='phone', placeholder='Phone Number', required='')
         br
         br
         button.btn.btn-info.btn-lg.center-block Submit

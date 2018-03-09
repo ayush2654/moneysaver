@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    title Profile
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-inverse
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='http://localhost:3000')  MoneySaver
+        ul.nav.navbar-nav
+          li
+            a(href='http://localhost:3000') Home
+        
+          li
+            a(href='#') About
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='http://localhost:3000/login')
+              span.glyphicon.glyphicon-user
+              |  Sign Out
+    br
+    br
+    h1(style='text-align:center')
+      | Hello
+      strong  #{result[0].firstname}  #{result[0].lastname}
+      |  !!....Welcome to your profile
+    br
+    br
+    .container
+      .table-responsive
+        table.table
+          thead
+            tr
+              th Info
+              th Details
+          tbody
+          - each item in rows
+            tr
+              td Firstname
+              td= result[0].firstname
+            tr
+              td Lastname
+              td=result[0].lastname
+            tr
+              td Username
+              td=result[0].username
+            tr
+              td Email
+              td=rows[0].email
+            tr
+              td Password
+              td=rows[0].password
+            tr
+              td Address
+              td=add[0].street + "     " + add[0].city +"      "+add[0].country
+            tr
+              td Mobile no
+              td=rows[0].phone
+            tr
+              td zipcode
+              td=add[0].zipcode
+      br
+      br
+      a.btn.btn-success.center-block.btn-lg(href='#')  Transactions
